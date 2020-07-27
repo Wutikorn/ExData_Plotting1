@@ -3,7 +3,7 @@ powerCons$Date <- paste(powerCons$Date, powerCons$Time, sep = " ")
 powerCons$Date <- strptime(powerCons$Date, format = "%d/%m/%Y %H:%M:%S")
 powerCons <- subset(powerCons, Date>="2007-02-01" & Date<"2007-02-03")
 
-par(mfrow = c(2, 2))
+par(mfrow = c(2, 2), mar = c(4, 4, 2, 1), oma = c(0, 0, 0, 0))
 
 hist(powerCons$Global_active_power, xlab = "Global Active Power (kilowatts)", main = "Global Active Power", col = "red")
 
